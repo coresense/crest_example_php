@@ -2,7 +2,7 @@
 
 // GET request to read records.
 
-$apiUrl = 'http://api-<your domain>.coresense.com/v1/category?fields=id,category,label';
+$apiUrl = 'https://api-<your domain>.coresense.com/v1/category?fields=id,category,label';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
 

@@ -2,7 +2,7 @@
 
 // POST request to create a new record.
 
-$apiUrl = 'http://api-<your domain>.coresense.com/v1/category';
+$apiUrl = 'https://api-<your domain>.coresense.com/v1/category';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
 

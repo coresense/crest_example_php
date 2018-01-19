@@ -2,7 +2,7 @@
 
 // PUT request to udpate an existing record.
 
-$apiUrl = 'http://api-<your domain>.coresense.com/v1/category/1';
+$apiUrl = 'https://api-<your domain>.coresense.com/v1/category/1';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
 
