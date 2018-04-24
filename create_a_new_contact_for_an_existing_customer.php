@@ -21,8 +21,8 @@ $apiUrl = 'https://api-<your domain>.coresense.com/v1/contact';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
 
-require_once '../functions.php';
-require_once '../vendor/autoload.php';
+require_once 'functions.php';
+require_once 'vendor/autoload.php';
 
 $data = [
 	'customer_id' => '123', // This is the existing customer's ID.

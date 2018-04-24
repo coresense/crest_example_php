@@ -10,8 +10,8 @@ $apiUrl = 'https://api-<your domain>.coresense.com/v1/customer';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
 
-require_once '../functions.php';
-require_once '../vendor/autoload.php';
+require_once 'functions.php';
+require_once 'vendor/autoload.php';
 
 $data = [
 //	'affiliate_id' => '1', // Optional. From the affiliates table, available via the /v1/affiliate endpoint.
