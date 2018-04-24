@@ -5,6 +5,11 @@
 // If you omit the default_shipping_contact and provide only the
 // default_billing_contact, then the data in default_billing_contact
 // will be used for default_shipping_contact as well.
+//
+// Note there are many fields on the customer record, almost all of
+// which are optional. You can perform a GET query on the /v1/customer
+// endpoint to see an example of all the fields that are defined for
+// your particular implementation.
 
 $apiUrl = 'https://api-<your domain>.coresense.com/v1/customer';
 $userId = '<your user id>';
