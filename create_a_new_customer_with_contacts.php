@@ -20,7 +20,7 @@ require_once 'vendor/autoload.php';
 
 $data = [
 //	'affiliate_id' => '1', // Optional. From the affiliates table, available via the /v1/affiliate endpoint.
-	'originating_brand_id' => '1', // Required. From the brands table, available via the /v1/brand endpoint.
+//	'originating_brand_id' => '1', // Optional. From the brands table, available via the /v1/brand endpoint.
 	'default_billing_contact' => [
 		'label' => 'home',
 		'active' => true,
