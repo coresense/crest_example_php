@@ -27,24 +27,28 @@ $data = [
 	'items' => [
 		[
 
-			// The ID of the product to order. These can be enumerated via
+			// Required. The ID of the product to order. These can be enumerated via
 			// the GET /v1/product endpoint.
 			'product_id' => 123,
 
-			// The quantity to order. If omitted, defaults to 1.
-			'quantity' => 1,
-
-			// The ID of the contact that this item will be shipped to. If
-			// omitted, the customer's default shipping contact will be used.
-			'shipping_contact_id' => 789,
-
-			// The ID of the shipping method that this item will use. These
+			// Required. The ID of the shipping method that this item will use. These
 			// can be enumerated via the GET /v1/shippingMethod endpoint.
 			'shipping_method_id' => 7,
 
-			// If provided, source the items from this warehouse. These can be
-			// enumerated via the GET /v1/warehouse endpoint. If this value is
-			// not provided, your existing sourcing rules will be used.
+			// Optional. The quantity to order. If omitted, defaults to 1.
+			'quantity' => 1,
+
+			// Optional. The unit price. If omitted, defaults to the product's channel
+			// price.
+			'unitPrice' => 1.23,
+
+			// Optional. The ID of the contact that this item will be shipped to.
+			// If omitted, the customer's default shipping contact will be used.
+			'shipping_contact_id' => 789,
+
+			// Optional. If provided, source the items from this warehouse. These can
+			// be enumerated via the GET /v1/warehouse endpoint. If this value is not
+			// provided, your existing sourcing rules will be used.
 			'warehouse_id' => 2,
 
 		],
