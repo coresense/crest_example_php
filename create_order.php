@@ -38,9 +38,9 @@ $data = [
 			// Optional. The quantity to order. If omitted, defaults to 1.
 			'quantity' => 1,
 
-			// Optional. The unit price. If omitted, defaults to the product's channel
-			// price.
-			'unitPrice' => 1.23,
+			// Optional. The unit price for this item. If omitted, defaults to the
+			// product's price set for the indicated channel.
+			'unit_price' => 1.23,
 
 			// Optional. The ID of the contact that this item will be shipped to.
 			// If omitted, the customer's default shipping contact will be used.
