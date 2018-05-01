@@ -1,15 +1,15 @@
 <?php
 
-$apiUrl = 'https://api-<your domain>.coresense.com/v1/category?fields=id,category,label';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
+$apiUrl = '<your api url>';
 
 require_once 'functions.php';
 require_once 'vendor/autoload.php';
 
 $client = new \GuzzleHttp\Client();
 try {
-	$res = $client->request('POST', $apiUrl, [
+	$res = $client->request('POST', $apiUrl . '/v1/category?fields=id,category,label', [
 		'headers' => [
 			'X-Auth-Token' => token($userId, $apiKey),
 		],

@@ -17,15 +17,15 @@
 // name instead of country_id, then the values you provide must match the
 // values in your database.
 
-$apiUrl = 'https://api-<your domain>.coresense.com/v1/contact';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
+$apiUrl = '<your api url>';
 
 require_once 'functions.php';
 require_once 'vendor/autoload.php';
 
 $data = [
-	'customer_id' => '123', // This is the existing customer's ID.
+	'customer_id' => 123, // This is the existing customer's ID.
 	'label' => 'home',
 	'active' => true,
 	'first_name' => 'Joe',
@@ -52,7 +52,7 @@ $data = [
 
 $client = new \GuzzleHttp\Client();
 try {
-	$res = $client->request('POST', $apiUrl, [
+	$res = $client->request('POST', $apiUrl . '/v1/contact', [
 		'headers' => [
 			'X-Auth-Token' => token($userId, $apiKey),
 		],

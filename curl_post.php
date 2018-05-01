@@ -2,9 +2,9 @@
 
 // POST request to create a new record.
 
-$apiUrl = 'https://api-<your domain>.coresense.com/v1/category';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
+$apiUrl = '<your api url>';
 
 require_once 'functions.php';
 
@@ -14,7 +14,7 @@ $data = json_encode([
 	'active' => true,
 ]);
 
-$curl = curl_init($apiUrl);
+$curl = curl_init($apiUrl . '/v1/category');
 curl_setopt_array($curl, [
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_HTTPHEADER => [

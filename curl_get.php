@@ -2,13 +2,13 @@
 
 // GET request to read records.
 
-$apiUrl = 'https://api-<your domain>.coresense.com/v1/category?fields=id,category,label';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
+$apiUrl = '<your api url>';
 
 require_once 'functions.php';
 
-$curl = curl_init($apiUrl);
+$curl = curl_init($apiUrl . '/v1/category?fields=id,category,label');
 curl_setopt_array($curl, [
 	CURLOPT_RETURNTRANSFER => true,
 	CURLOPT_HTTPHEADER => [

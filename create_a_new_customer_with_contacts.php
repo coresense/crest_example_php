@@ -11,9 +11,9 @@
 // endpoint to see an example of all the fields that are defined for
 // your particular implementation.
 
-$apiUrl = 'https://api-<your domain>.coresense.com/v1/customer';
 $userId = '<your user id>';
 $apiKey = '<your api key>';
+$apiUrl = '<your api url>';
 
 require_once 'functions.php';
 require_once 'vendor/autoload.php';
@@ -72,7 +72,7 @@ $data = [
 
 $client = new \GuzzleHttp\Client();
 try {
-	$res = $client->request('POST', $apiUrl, [
+	$res = $client->request('POST', $apiUrl . '/v1/customer', [
 		'headers' => [
 			'X-Auth-Token' => token($userId, $apiKey),
 		],
