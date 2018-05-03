@@ -23,6 +23,14 @@ $data = [
 	// enumerated via the GET /v1/channel endpoint.
 	'channel_id' => 1,
 
+	// If this order has already been paid for, you may indicate the payment receivable
+	// type. Receivable types may be enumerated via the GET /v1/receivableType endpoint.
+	// If omitted, the order will not be fulfilled until paid.
+	'payment_receivable_type_id' => 7,
+
+	// If specified, this will override any internal shipping rates you have configured.
+	'shipping_price' => 12.34,
+
 	// An array of items to place on the order.
 	'items' => [
 		[
@@ -38,13 +46,21 @@ $data = [
 			// Optional. The quantity to order. If omitted, defaults to 1.
 			'quantity' => 1,
 
-			// Optional. The unit price for this item. If omitted, defaults to the
-			// product's price set for the indicated channel.
-			'unit_price' => 1.23,
+			// Optional. The sales tax dollar amount for this line.
+			'sales_tax' => 1.07,
+
+			// Optional. The sales tax rate for this line. If both this and sales_tax
+			// are specified, this will take precedence. If both valuesa are ommitted,
+			// tax will be determined by your sales tax rules.
+			'sales_tax_rate' => 0.075,
 
 			// Optional. The ID of the contact that this item will be shipped to.
 			// If omitted, the customer's default shipping contact will be used.
 			'shipping_contact_id' => 789,
+
+			// Optional. The unit price for this item. If omitted, defaults to the
+			// product's price set for the indicated channel.
+			'unit_price' => 1.23,
 
 			// Optional. If provided, source the items from this warehouse. These can
 			// be enumerated via the GET /v1/warehouse endpoint. If this value is not
