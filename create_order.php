@@ -78,7 +78,7 @@ $data = [
 
 $client = new \GuzzleHttp\Client();
 try {
-	$res = $client->request('POST', $apiUrl . '/v1/customer', [
+	$res = $client->request('POST', $apiUrl . '/v1/order', [
 		'headers' => [
 			'X-Auth-Token' => token($userId, $apiKey),
 		],
